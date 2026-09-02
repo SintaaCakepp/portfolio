@@ -13,13 +13,14 @@ const skills = [
 
 const projects = [
   {
-    number: '01',
-    title: 'Personal Portfolio',
-    description:
-      'A modern personal portfolio website designed to showcase my profile, skills, and projects.',
-    tech: ['Vue.js', 'HTML', 'CSS'],
-    type: 'Web Development'
-  },
+  number: '01',
+  title: 'Personal Portfolio',
+  description:
+    'A modern personal portfolio website designed to showcase my profile, skills, and projects.',
+  tech: ['Vue.js', 'HTML', 'CSS'],
+  type: 'Web Development',
+  link: 'https://cyntaa.vercel.app/'
+},
   {
   number: '02',
   title: 'Brewly Coffee App',
