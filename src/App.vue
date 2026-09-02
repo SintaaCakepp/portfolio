@@ -20,15 +20,16 @@ const projects = [
     tech: ['Vue.js', 'HTML', 'CSS'],
     type: 'Web Development'
   },
-{
-  number: '02',
-  title: 'Brewly Coffee App',
-  description: '...',
-  tech: ['Java', 'Firebase', 'Firestore'],
-  type: 'Mobile Application',
-  image: brewlyImage,
-  link: 'LINK_GITHUB_BREWLY'
-}
+  {
+    number: '02',
+    title: 'Brewly Coffee App',
+    description:
+      'A coffee shop mobile application featuring user authentication, product browsing, shopping cart, checkout, and order history.',
+    tech: ['Java', 'Firebase', 'Firestore'],
+    type: 'Mobile Application',
+    image: brewlyImage,
+    link: 'LINK_GITHUB_BREWLY'
+  }
 ]
 </script>
 
@@ -60,148 +61,149 @@ const projects = [
 
 
     <!-- =========================
-     HERO
-========================= -->
-<section id="home" class="hero">
+         HERO
+    ========================== -->
+    <section id="home" class="hero">
 
-  <div class="hero-content">
+      <div class="hero-content">
 
-    <!-- TEXT -->
-    <div class="hero-text">
+        <!-- TEXT -->
+        <div class="hero-text">
 
-      <p class="intro">
-        Hello, I'm 👋
-      </p>
+          <p class="intro">
+            Hello, I'm 👋
+          </p>
 
-      <h1>
-        Ni Komang Indrani
-        <br />
-        <span>Sinta Respani</span>
-      </h1>
+          <h1>
+            Ni Komang Indrani
+            <br />
+            <span>Sinta Respani</span>
+          </h1>
 
-      <h2>
-        Informatics Student & Aspiring Web Developer
-      </h2>
+          <h2>
+            Informatics Student & Aspiring Web Developer
+          </h2>
 
-      <p class="hero-description">
-        I am passionate about technology, creativity, and web development.
-        Welcome to my personal portfolio website!
-      </p>
+          <p class="hero-description">
+            I am passionate about technology, creativity, and web development.
+            Welcome to my personal portfolio website!
+          </p>
 
-      <!-- BUTTON -->
-      <div class="hero-buttons">
 
-        <a
-          href="#projects"
-          class="primary-btn"
-        >
-          View My Work
-          <span>→</span>
-        </a>
+          <!-- BUTTON -->
+          <div class="hero-buttons">
 
-        <a
-          href="#about"
-          class="secondary-btn"
-        >
-          About Me
-        </a>
+            <a
+              href="#projects"
+              class="primary-btn"
+            >
+              View My Work
+              <span>→</span>
+            </a>
+
+            <a
+              href="#about"
+              class="secondary-btn"
+            >
+              About Me
+            </a>
+
+          </div>
+
+
+          <!-- SOCIAL MEDIA -->
+          <div class="social-links">
+
+            <!-- GitHub -->
+            <a
+              href="https://github.com/SintaaCakepp"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+            <!-- Instagram -->
+            <a
+              href="https://www.instagram.com/sintaacakepp_/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <!-- TikTok -->
+            <a
+              href="https://www.tiktok.com/@sintaacakepp"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok"
+            >
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+            <!-- WhatsApp -->
+            <a
+              href="https://wa.me/62881037363537"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+            <!-- Email -->
+            <a
+              href="mailto:indyopeh@gmail.com"
+              aria-label="Email"
+            >
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROFILE -->
+        <div class="profile-area">
+
+          <div class="profile-circle">
+
+            <img
+              :src="profileImage"
+              alt="Ni Komang Indrani Sinta Respani"
+              class="profile-image"
+            />
+
+          </div>
+
+
+          <!-- FLOATING ICONS -->
+          <div class="floating-card code-card">
+            &lt;/&gt;
+          </div>
+
+          <div class="floating-card laptop-card">
+            💻
+          </div>
+
+          <div class="floating-card database-card">
+            🗄
+          </div>
+
+
+          <!-- DECORATION -->
+          <div class="dots dots-one"></div>
+          <div class="dots dots-two"></div>
+
+        </div>
 
       </div>
 
-      <!-- SOCIAL MEDIA -->
-      <div class="social-links">
-
-        <!-- GitHub -->
-        <a
-          href="https://github.com/SintaaCakepp"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-        >
-          <i class="fa-brands fa-github"></i>
-        </a>
-
-        <!-- Instagram -->
-        <a
-          href="https://www.instagram.com/sintaacakepp_/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-        >
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-
-        <!-- TikTok -->
-        <a
-          href="https://www.tiktok.com/@sintaacakepp"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="TikTok"
-        >
-          <i class="fa-brands fa-tiktok"></i>
-        </a>
-
-        <!-- WhatsApp -->
-        <a
-          href="https://wa.me/62881037363537"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="WhatsApp"
-        >
-          <i class="fa-brands fa-whatsapp"></i>
-        </a>
-
-        <!-- Email -->
-        <a
-          href="mailto:indyopeh@gmail.com"
-          aria-label="Email"
-        >
-          <i class="fa-solid fa-envelope"></i>
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <!-- PROFILE -->
-    <div class="profile-area">
-
-      <div class="profile-circle">
-
-        <img
-          :src="profileImage"
-          alt="Ni Komang Indrani Sinta Respani"
-          class="profile-image"
-        />
-
-      </div>
-
-
-      <!-- FLOATING ICONS -->
-      <div class="floating-card code-card">
-        &lt;/&gt;
-      </div>
-
-      <div class="floating-card laptop-card">
-        💻
-      </div>
-
-      <div class="floating-card database-card">
-        🗄
-      </div>
-
-
-      <!-- DECORATION -->
-      <div class="dots dots-one"></div>
-
-      <div class="dots dots-two"></div>
-
-    </div>
-
-  </div>
-
-</section>
+    </section>
 
 
     <!-- =========================
@@ -371,40 +373,40 @@ const projects = [
           class="project-card"
         >
 
-<!-- PROJECT IMAGE -->
-<div class="project-image">
+          <!-- PROJECT IMAGE -->
+          <div class="project-image">
 
-  <img
-    v-if="project.image"
-    :src="project.image"
-    :alt="project.title"
-  />
+            <img
+              v-if="project.image"
+              :src="project.image"
+              :alt="project.title"
+            />
 
-  <span v-else>
-    {{ project.number }}
-  </span>
+            <span v-else>
+              {{ project.number }}
+            </span>
 
-  <div class="project-image-text">
-    {{ project.type }}
-  </div>
+            <div class="project-image-text">
+              {{ project.type }}
+            </div>
 
-</div>
+          </div>
 
 
-<!-- PROJECT CONTENT -->
-<div class="project-content">
+          <!-- PROJECT CONTENT -->
+          <div class="project-content">
 
-  <p class="project-number">
-    PROJECT {{ project.number }}
-  </p>
+            <p class="project-number">
+              PROJECT {{ project.number }}
+            </p>
 
-  <h3>
-    {{ project.title }}
-  </h3>
+            <h3>
+              {{ project.title }}
+            </h3>
 
-  <p class="project-description">
-    {{ project.description }}
-  </p>
+            <p class="project-description">
+              {{ project.description }}
+            </p>
 
 
             <!-- TECHNOLOGY -->
@@ -422,12 +424,23 @@ const projects = [
 
             <!-- LINK -->
             <a
-              href="#"
+              v-if="project.link"
+              :href="project.link"
+              target="_blank"
+              rel="noopener noreferrer"
               class="project-link"
             >
               View Project
               <span>→</span>
             </a>
+
+            <span
+              v-else
+              class="project-link disabled"
+            >
+              Coming Soon
+              <span>↗</span>
+            </span>
 
           </div>
 
