@@ -3,12 +3,12 @@ import profileImage from './assets/profile.jpeg'
 import brewlyImage from './assets/brewly.png'
 
 const skills = [
-  { name: 'HTML', icon: '🌐', level: 85 },
-  { name: 'CSS', icon: '🎨', level: 80 },
-  { name: 'JavaScript', icon: 'JS', level: 70 },
-  { name: 'Vue.js', icon: '💚', level: 65 },
-  { name: 'Canva', icon: '✦', level: 88 },
-  { name: 'CapCut', icon: '✂', level: 92 }
+  { name: 'HTML', icon: 'fa-brands fa-html5' },
+  { name: 'CSS', icon: 'fa-brands fa-css3-alt' },
+  { name: 'JavaScript', icon: 'fa-brands fa-js' },
+  { name: 'Vue.js', icon: 'fa-brands fa-vuejs' },
+  { name: 'Canva', icon: 'CV' },
+  { name: 'CapCut', icon: 'CC' }
 ]
 
 const projects = [
@@ -292,60 +292,50 @@ const projects = [
     </section>
 
 
-    <!-- =========================
-         SKILLS
-    ========================== -->
-    <section id="skills" class="skills-section">
+  <!-- =========================
+     SKILLS
+========================= -->
+<section id="skills" class="skills-section">
 
-      <div class="skills-heading">
+  <div class="skills-heading">
 
-        <p>WHAT I CAN DO</p>
+    <p>WHAT I CAN DO</p>
 
-        <h2>My Skills</h2>
+    <h2>My Skills</h2>
 
-      </div>
-
-
-      <div class="skills-container">
-
-        <div
-          v-for="skill in skills"
-          :key="skill.name"
-          class="skill-card"
-        >
-
-          <div class="skill-top">
-
-            <div class="skill-icon">
-              {{ skill.icon }}
-            </div>
-
-            <span>
-              {{ skill.level }}%
-            </span>
-
-          </div>
+  </div>
 
 
-          <h3>
-            {{ skill.name }}
-          </h3>
+  <div class="skills-container">
 
+    <div
+      v-for="skill in skills"
+      :key="skill.name"
+      class="skill-card"
+    >
 
-          <div class="skill-bar">
+      <div class="skill-icon">
 
-            <div
-              class="skill-progress"
-              :style="{ width: skill.level + '%' }"
-            ></div>
+  <i
+    v-if="skill.icon.startsWith('fa-')"
+    :class="skill.icon"
+  ></i>
 
-          </div>
+  <span v-else>
+    {{ skill.icon }}
+  </span>
 
-        </div>
+</div>
 
-      </div>
+      <h3>
+        {{ skill.name }}
+      </h3>
 
-    </section>
+    </div>
+
+  </div>
+
+</section>
 
 
     <!-- =========================
