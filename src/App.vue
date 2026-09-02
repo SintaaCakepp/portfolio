@@ -1,6 +1,10 @@
 <script setup>
+import { ref } from 'vue'
+
 import profileImage from './assets/profile.jpeg'
 import brewlyImage from './assets/brewly.png'
+
+const menuOpen = ref(false)
 
 const skills = [
   { name: 'HTML', icon: 'fa-brands fa-html5' },
@@ -37,28 +41,109 @@ const projects = [
 <template>
   <main>
 
-    <!-- =========================
-         NAVBAR
-    ========================== -->
-    <nav class="navbar">
+<!-- =========================
+     NAVBAR
+========================= -->
+<nav class="navbar">
 
-      <a href="#home" class="logo">
-        Cyntaa<span>.</span>
-      </a>
+  <a href="#home" class="logo">
+    Cyntaa<span>.</span>
+  </a>
 
-      <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </div>
 
-      <a href="#contact" class="nav-button">
-        Contact Me ↗
-      </a>
+  <!-- DESKTOP MENU -->
+  <div class="nav-links">
 
-    </nav>
+    <a href="#home">
+      Home
+    </a>
+
+    <a href="#about">
+      About
+    </a>
+
+    <a href="#skills">
+      Skills
+    </a>
+
+    <a href="#projects">
+      Projects
+    </a>
+
+    <a href="#contact">
+      Contact
+    </a>
+
+  </div>
+
+
+  <!-- DESKTOP CONTACT -->
+  <a
+    href="#contact"
+    class="nav-button"
+  >
+    Contact Me ↗
+  </a>
+
+
+  <!-- MOBILE MENU BUTTON -->
+  <button
+    class="menu-toggle"
+    @click="menuOpen = !menuOpen"
+    aria-label="Toggle navigation"
+  >
+    <i
+      :class="menuOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'"
+    ></i>
+  </button>
+
+
+  <!-- MOBILE MENU -->
+  <div
+    v-if="menuOpen"
+    class="mobile-menu"
+  >
+
+    <a
+      href="#home"
+      @click="menuOpen = false"
+    >
+      Home
+    </a>
+
+    <a
+      href="#about"
+      @click="menuOpen = false"
+    >
+      About
+    </a>
+
+    <a
+      href="#skills"
+      @click="menuOpen = false"
+    >
+      Skills
+    </a>
+
+    <a
+      href="#projects"
+      @click="menuOpen = false"
+    >
+      Projects
+    </a>
+
+    <a
+      href="#contact"
+      @click="menuOpen = false"
+    >
+      Contact
+    </a>
+
+  </div>
+
+</nav>
 
 
     <!-- =========================
