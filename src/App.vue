@@ -7,8 +7,8 @@ const skills = [
   { name: 'CSS', icon: 'fa-brands fa-css3-alt' },
   { name: 'JavaScript', icon: 'fa-brands fa-js' },
   { name: 'Vue.js', icon: 'fa-brands fa-vuejs' },
-  { name: 'Canva', icon: 'CV' },
-  { name: 'CapCut', icon: 'CC' }
+  { name: 'Canva', icon: '✦' },
+  { name: 'CapCut', icon: '✂' }
 ]
 
 const projects = [
@@ -314,7 +314,7 @@ const projects = [
       class="skill-card"
     >
 
-      <div class="skill-icon">
+    <div class="skill-icon">
 
   <i
     v-if="skill.icon.startsWith('fa-')"
