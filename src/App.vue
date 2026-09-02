@@ -17,139 +17,144 @@ const skills = [
 
 const projects = [
   {
-  number: '01',
-  title: 'Personal Portfolio',
-  description:
-    'A modern personal portfolio website designed to showcase my profile, skills, and projects.',
-  tech: ['Vue.js', 'HTML', 'CSS'],
-  type: 'Web Development',
-  link: 'https://cyntaa.vercel.app/'
-},
+    number: '01',
+    title: 'Personal Portfolio',
+    description:
+      'A modern personal portfolio website designed to showcase my profile, skills, and projects.',
+    tech: ['Vue.js', 'HTML', 'CSS'],
+    type: 'Web Development',
+    link: 'https://cyntaa.vercel.app/'
+  },
   {
-  number: '02',
-  title: 'Brewly Coffee App',
-  description:
-    'A coffee shop mobile application featuring user authentication, product browsing, shopping cart, checkout, and order history.',
-  tech: ['Java', 'Firebase', 'Firestore'],
-  type: 'Mobile Application',
-  image: brewlyImage,
-  link: 'https://github.com/SintaaCakepp/Brewly-Coffee-App'
-}
+    number: '02',
+    title: 'Brewly Coffee App',
+    description:
+      'A coffee shop mobile application featuring user authentication, product browsing, shopping cart, checkout, and order history.',
+    tech: ['Java', 'Firebase', 'Firestore'],
+    type: 'Mobile Application',
+    image: brewlyImage,
+    link: 'https://github.com/SintaaCakepp/Brewly-Coffee-App'
+  }
 ]
 </script>
 
 <template>
   <main>
 
-<!-- =========================
-     NAVBAR
-========================= -->
-<nav class="navbar">
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+    <nav class="navbar">
 
-  <a href="#home" class="logo">
-    Cyntaa<span>.</span>
-  </a>
-
-
-  <!-- DESKTOP MENU -->
-  <div class="nav-links">
-
-    <a href="#home">
-      Home
-    </a>
-
-    <a href="#about">
-      About
-    </a>
-
-    <a href="#skills">
-      Skills
-    </a>
-
-    <a href="#projects">
-      Projects
-    </a>
-
-    <a href="#contact">
-      Contact
-    </a>
-
-  </div>
+      <a href="#home" class="logo">
+        Cyntaa<span>.</span>
+      </a>
 
 
-  <!-- DESKTOP CONTACT -->
-  <a
-    href="#contact"
-    class="nav-button"
-  >
-    Contact Me ↗
-  </a>
+      <!-- DESKTOP MENU -->
+      <div class="nav-links">
+
+        <a href="#home">
+          Home
+        </a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#skills">
+          Skills
+        </a>
+
+        <a href="#projects">
+          Projects
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+      </div>
 
 
-  <!-- MOBILE MENU BUTTON -->
-  <button
-    class="menu-toggle"
-    @click="menuOpen = !menuOpen"
-    aria-label="Toggle navigation"
-  >
-    <i
-      :class="menuOpen
-        ? 'fa-solid fa-xmark'
-        : 'fa-solid fa-bars'"
-    ></i>
-  </button>
+      <!-- DESKTOP CONTACT -->
+      <a
+        href="#contact"
+        class="nav-button"
+      >
+        Contact Me ↗
+      </a>
 
 
-  <!-- MOBILE MENU -->
-  <div
-    v-if="menuOpen"
-    class="mobile-menu"
-  >
+      <!-- MOBILE MENU BUTTON -->
+      <button
+        class="menu-toggle"
+        @click="menuOpen = !menuOpen"
+        aria-label="Toggle navigation"
+      >
+        <i
+          :class="
+            menuOpen
+              ? 'fa-solid fa-xmark'
+              : 'fa-solid fa-bars'
+          "
+        ></i>
+      </button>
 
-    <a
-      href="#home"
-      @click="menuOpen = false"
-    >
-      Home
-    </a>
 
-    <a
-      href="#about"
-      @click="menuOpen = false"
-    >
-      About
-    </a>
+      <!-- MOBILE MENU -->
+      <div
+        v-if="menuOpen"
+        class="mobile-menu"
+      >
 
-    <a
-      href="#skills"
-      @click="menuOpen = false"
-    >
-      Skills
-    </a>
+        <a
+          href="#home"
+          @click="menuOpen = false"
+        >
+          Home
+        </a>
 
-    <a
-      href="#projects"
-      @click="menuOpen = false"
-    >
-      Projects
-    </a>
+        <a
+          href="#about"
+          @click="menuOpen = false"
+        >
+          About
+        </a>
 
-    <a
-      href="#contact"
-      @click="menuOpen = false"
-    >
-      Contact
-    </a>
+        <a
+          href="#skills"
+          @click="menuOpen = false"
+        >
+          Skills
+        </a>
 
-  </div>
+        <a
+          href="#projects"
+          @click="menuOpen = false"
+        >
+          Projects
+        </a>
 
-</nav>
+        <a
+          href="#contact"
+          @click="menuOpen = false"
+        >
+          Contact
+        </a>
+
+      </div>
+
+    </nav>
 
 
     <!-- =========================
          HERO
     ========================== -->
-    <section id="home" class="hero">
+    <section
+      id="home"
+      class="hero"
+    >
 
       <div class="hero-content">
 
@@ -295,7 +300,10 @@ const projects = [
     <!-- =========================
          ABOUT
     ========================== -->
-    <section id="about" class="about-section">
+    <section
+      id="about"
+      class="about-section"
+    >
 
       <div class="section-title about-title">
 
@@ -333,106 +341,112 @@ const projects = [
 
 
         <!-- HIGHLIGHTS -->
-<div class="about-highlights">
+        <div class="about-highlights">
 
-  <div class="about-item">
+          <div class="about-item">
 
-    <div class="about-icon">
-      <i class="fa-solid fa-graduation-cap"></i>
-    </div>
+            <div class="about-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
 
-    <div class="about-item-text">
-      <strong>Informatics Student</strong>
-      <small>Information Technology</small>
-    </div>
+            <div class="about-item-text">
+              <strong>Informatics Student</strong>
+              <small>Information Technology</small>
+            </div>
 
-  </div>
-
-
-  <div class="about-item">
-
-    <div class="about-icon">
-      <i class="fa-solid fa-code"></i>
-    </div>
-
-    <div class="about-item-text">
-      <strong>Web Development</strong>
-      <small>Frontend &amp; UI Development</small>
-    </div>
-
-  </div>
+          </div>
 
 
-  <div class="about-item">
+          <div class="about-item">
 
-    <div class="about-icon">
-      <i class="fa-solid fa-pen-nib"></i>
-    </div>
+            <div class="about-icon">
+              <i class="fa-solid fa-code"></i>
+            </div>
 
-    <div class="about-item-text">
-      <strong>Digital Creativity</strong>
-      <small>Design &amp; Content Editing</small>
-    </div>
+            <div class="about-item-text">
+              <strong>Web Development</strong>
+              <small>Frontend &amp; UI Development</small>
+            </div>
 
-  </div>
-
-</div>
-
-</div>
-
-</section>
+          </div>
 
 
-<!-- =========================
-     SKILLS
-========================= -->
-<section id="skills" class="skills-section">
+          <div class="about-item">
 
-  <div class="skills-heading">
+            <div class="about-icon">
+              <i class="fa-solid fa-pen-nib"></i>
+            </div>
 
-    <p>WHAT I CAN DO</p>
+            <div class="about-item-text">
+              <strong>Digital Creativity</strong>
+              <small>Design &amp; Content Editing</small>
+            </div>
 
-    <h2>My Skills</h2>
+          </div>
 
-  </div>
-
-
-  <div class="skills-container">
-
-    <div
-      v-for="skill in skills"
-      :key="skill.name"
-      class="skill-card"
-    >
-
-      <div class="skill-icon">
-
-        <i
-          v-if="skill.icon.startsWith('fa-')"
-          :class="skill.icon"
-        ></i>
-
-        <span v-else>
-          {{ skill.icon }}
-        </span>
+        </div>
 
       </div>
 
-      <h3>
-        {{ skill.name }}
-      </h3>
+    </section>
 
-    </div>
 
-  </div>
+    <!-- =========================
+         SKILLS
+    ========================== -->
+    <section
+      id="skills"
+      class="skills-section"
+    >
 
-</section>
+      <div class="skills-heading">
+
+        <p>WHAT I CAN DO</p>
+
+        <h2>My Skills</h2>
+
+      </div>
+
+
+      <div class="skills-container">
+
+        <div
+          v-for="skill in skills"
+          :key="skill.name"
+          class="skill-card"
+        >
+
+          <div class="skill-icon">
+
+            <i
+              v-if="skill.icon.startsWith('fa-')"
+              :class="skill.icon"
+            ></i>
+
+            <span v-else>
+              {{ skill.icon }}
+            </span>
+
+          </div>
+
+          <h3>
+            {{ skill.name }}
+          </h3>
+
+        </div>
+
+      </div>
+
+    </section>
 
 
     <!-- =========================
          PROJECTS
     ========================== -->
-    <section id="projects" class="projects-section">
+    <section
+      id="projects"
+      class="projects-section"
+    >
 
       <div class="projects-heading">
 
@@ -536,7 +550,10 @@ const projects = [
     <!-- =========================
          CONTACT
     ========================== -->
-    <section id="contact" class="contact-section">
+    <section
+      id="contact"
+      class="contact-section"
+    >
 
       <div class="contact-title">
 
