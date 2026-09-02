@@ -21,15 +21,15 @@ const projects = [
     type: 'Web Development'
   },
   {
-    number: '02',
-    title: 'Brewly Coffee App',
-    description:
-      'A coffee shop mobile application featuring user authentication, product browsing, shopping cart, checkout, and order history.',
-    tech: ['Java', 'Firebase', 'Firestore'],
-    type: 'Mobile Application',
-    image: brewlyImage,
-    link: 'LINK_GITHUB_BREWLY'
-  }
+  number: '02',
+  title: 'Brewly Coffee App',
+  description:
+    'A coffee shop mobile application featuring user authentication, product browsing, shopping cart, checkout, and order history.',
+  tech: ['Java', 'Firebase', 'Firestore'],
+  type: 'Mobile Application',
+  image: brewlyImage,
+  link: 'https://github.com/SintaaCakepp/Brewly-Coffee-App'
+}
 ]
 </script>
 
