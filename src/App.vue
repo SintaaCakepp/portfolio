@@ -23,11 +23,11 @@ const projects = [
 {
   number: '02',
   title: 'Brewly Coffee App',
-  description:
-    'A coffee shop application featuring authentication, product browsing, cart, checkout, and order history.',
+  description: '...',
   tech: ['Java', 'Firebase', 'Firestore'],
   type: 'Mobile Application',
-  image: brewlyImage
+  image: brewlyImage,
+  link: 'LINK_GITHUB_BREWLY'
 }
 ]
 </script>
