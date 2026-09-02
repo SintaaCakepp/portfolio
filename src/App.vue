@@ -11,7 +11,7 @@ const skills = [
   { name: 'CapCut', icon: '✂', level: 92 }
 ]
 
-const projects = [ AKU 
+const projects = [
   {
     number: '01',
     title: 'Personal Portfolio',
