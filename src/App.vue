@@ -176,8 +176,7 @@ const projects = [
           </h2>
 
           <p class="hero-description">
-            I am passionate about technology, creativity, and web development.
-            Welcome to my personal portfolio website!
+            I'm passionate about technology, web development, and digital creativity. Welcome to my personal portfolio!
           </p>
 
 
@@ -273,17 +272,17 @@ const projects = [
 
 
           <!-- FLOATING ICONS -->
-          <div class="floating-card code-card">
-            &lt;/&gt;
-          </div>
+         <div class="floating-card code-card">
+  <i class="fa-solid fa-code"></i>
+</div>
 
-          <div class="floating-card laptop-card">
-            💻
-          </div>
+<div class="floating-card laptop-card">
+  <i class="fa-solid fa-laptop-code"></i>
+</div>
 
-          <div class="floating-card database-card">
-            🗄
-          </div>
+<div class="floating-card database-card">
+  <i class="fa-solid fa-database"></i>
+</div>
 
 
           <!-- DECORATION -->
@@ -308,8 +307,8 @@ const projects = [
       <div class="section-title about-title">
 
         <div class="section-icon">
-          👩‍💻
-        </div>
+  <i class="fa-solid fa-user"></i>
+</div>
 
         <div>
           <p>GET TO KNOW ME</p>
@@ -322,9 +321,11 @@ const projects = [
       <div class="about-text">
 
         <p>
-          Hello! I'm Ni Komang Indrani Sinta Respani, an Informatics
-          student with a strong interest in web development, technology,
-          and digital creativity.
+          Hello! I'm Ni Komang Indrani Sinta Respani, an Informatics student passionate about web development, technology, and digital creativity.
+
+I enjoy learning new technologies, building digital projects, and exploring creative ways to solve problems. I'm currently developing my skills in frontend development, particularly with HTML, CSS, JavaScript, and Vue.js.
+
+I'm a fast learner, detail-oriented, and always excited to gain new experiences and take on new challenges.
         </p>
 
         <p>
@@ -557,9 +558,9 @@ const projects = [
 
       <div class="contact-title">
 
-        <div class="contact-icon">
-          ✉
-        </div>
+       <div class="contact-icon">
+  <i class="fa-solid fa-envelope"></i>
+</div>
 
         <div>
           <p>LET'S CONNECT</p>
