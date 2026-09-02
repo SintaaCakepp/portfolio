@@ -622,6 +622,8 @@ a {
   font-weight: 700;
 
   letter-spacing: 1px;
+
+  margin-bottom: 5px;
 }
 
 .skills-heading h2 {
@@ -630,13 +632,20 @@ a {
   color: #13233d;
 }
 
+
+/* SKILL GRID */
+
 .skills-container {
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns:
+    repeat(3, 1fr);
 
   gap: 18px;
 }
+
+
+/* SKILL CARD */
 
 .skill-card {
   min-height: 145px;
@@ -651,70 +660,112 @@ a {
 
   justify-content: center;
 
-  background: white;
+  background: #ffffff;
 
-  border: 1px solid #e6eef7;
+  border: 1px solid #e5e5e5;
 
   border-radius: 15px;
 
   box-shadow:
-    0 5px 20px rgba(30, 70, 120, 0.07);
+    0 5px 20px rgba(0, 0, 0, 0.04);
 
-  transition: all 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 
   animation: fadeUp 0.7s ease both;
 }
 
 .skill-card:hover {
-  transform: translateY(-8px) scale(1.01);
+  transform: translateY(-7px);
+
+  border-color: #cfcfcf;
 
   box-shadow:
-    0 15px 35px rgba(23, 100, 192, 0.15);
-
-  border-color: #cfe3f8;
+    0 14px 30px rgba(0, 0, 0, 0.08);
 }
 
+
+/* ICON */
+
 .skill-icon {
-  width: 55px;
-  height: 55px;
+  width: 58px;
+  height: 58px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
   margin-bottom: 15px;
 
-  border-radius: 14px;
+  background: #f2f2f2;
 
-  background: #f3f3f3;
+  border: 1px solid #e2e2e2;
+
+  border-radius: 14px;
 
   color: #111111;
 
-  font-size: 24px;
+  font-size: 26px;
 
   font-weight: 700;
 
-  transition: all 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 }
+
+
+/* FONT AWESOME ICON */
+
+.skill-icon i {
+  color: #111111;
+
+  font-size: 26px;
+}
+
+
+/* CANVA / CAPCUT SYMBOL */
 
 .skill-icon span {
   color: #111111;
 
-  font-size: 24px;
+  font-size: 26px;
+
+  font-weight: 700;
+
+  line-height: 1;
 }
+
+
+/* ICON HOVER */
 
 .skill-card:hover .skill-icon {
   background: #111111;
 
-  color: white;
+  border-color: #111111;
+
+  color: #ffffff;
+
+  transform: scale(1.05);
+}
+
+.skill-card:hover .skill-icon i {
+  color: #ffffff;
 }
 
 .skill-card:hover .skill-icon span {
-  color: white;
+  color: #ffffff;
 }
 
+
+/* SKILL NAME */
+
 .skill-card h3 {
-  color: #42536a;
+  color: #222222;
 
   font-size: 14px;
 
