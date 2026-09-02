@@ -1,10 +1,18 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 import profileImage from './assets/profile.jpeg'
 import brewlyImage from './assets/brewly.png'
+import portfolioImage from './assets/portfolio.jpeg'
 
 const menuOpen = ref(false)
+const activeSection = ref('home')
+const showBackToTop = ref(false)
+
+const sectionIds = ['home', 'about', 'skills', 'projects', 'contact']
+
+let sectionObserver = null
+let revealObserver = null
 
 const skills = [
   { name: 'HTML', icon: 'fa-brands fa-html5' },
@@ -23,6 +31,7 @@ const projects = [
       'A modern personal portfolio website designed to showcase my profile, skills, and projects.',
     tech: ['Vue.js', 'HTML', 'CSS'],
     type: 'Web Development',
+    image: portfolioImage,
     link: 'https://cyntaa.vercel.app/'
   },
   {
@@ -36,6 +45,62 @@ const projects = [
     link: 'https://github.com/SintaaCakepp/Brewly-Coffee-App'
   }
 ]
+
+function setupScrollSpy() {
+  sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          activeSection.value = entry.target.id
+        }
+      })
+    },
+    { rootMargin: '-40% 0px -55% 0px', threshold: 0 }
+  )
+
+  sectionIds.forEach((id) => {
+    const el = document.getElementById(id)
+    if (el) sectionObserver.observe(el)
+  })
+}
+
+function setupScrollReveal() {
+  revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible')
+          revealObserver.unobserve(entry.target)
+        }
+      })
+    },
+    { threshold: 0.15 }
+  )
+
+  document.querySelectorAll('.reveal').forEach((el) => {
+    revealObserver.observe(el)
+  })
+}
+
+function handleScroll() {
+  showBackToTop.value = window.scrollY > 400
+}
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
+onMounted(() => {
+  setupScrollSpy()
+  setupScrollReveal()
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  if (sectionObserver) sectionObserver.disconnect()
+  if (revealObserver) revealObserver.disconnect()
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <template>
@@ -54,23 +119,38 @@ const projects = [
       <!-- DESKTOP MENU -->
       <div class="nav-links">
 
-        <a href="#home">
+        <a
+          href="#home"
+          :class="{ active: activeSection === 'home' }"
+        >
           Home
         </a>
 
-        <a href="#about">
+        <a
+          href="#about"
+          :class="{ active: activeSection === 'about' }"
+        >
           About
         </a>
 
-        <a href="#skills">
+        <a
+          href="#skills"
+          :class="{ active: activeSection === 'skills' }"
+        >
           Skills
         </a>
 
-        <a href="#projects">
+        <a
+          href="#projects"
+          :class="{ active: activeSection === 'projects' }"
+        >
           Projects
         </a>
 
-        <a href="#contact">
+        <a
+          href="#contact"
+          :class="{ active: activeSection === 'contact' }"
+        >
           Contact
         </a>
 
@@ -321,30 +401,26 @@ const projects = [
       <div class="about-text">
 
         <p>
-          Hello! I'm Ni Komang Indrani Sinta Respani, an Informatics student passionate about web development, technology, and digital creativity.
-
-I enjoy learning new technologies, building digital projects, and exploring creative ways to solve problems. I'm currently developing my skills in frontend development, particularly with HTML, CSS, JavaScript, and Vue.js.
-
-I'm a fast learner, detail-oriented, and always excited to gain new experiences and take on new challenges.
+          Hello! I'm Ni Komang Indrani Sinta Respani, an Informatics student
+          passionate about web development, technology, and digital creativity.
         </p>
 
         <p>
-          I enjoy learning new technologies, building digital projects,
-          and exploring creative ways to solve problems. Currently,
-          I am developing my skills in frontend development, especially
-          using HTML, CSS, JavaScript, and Vue.js.
+          I enjoy learning new technologies, building digital projects, and
+          exploring creative ways to solve problems. I'm currently developing
+          my frontend skills, especially with HTML, CSS, JavaScript, and Vue.js.
         </p>
 
         <p>
-          I am a fast learner, detail-oriented, and always excited to
-          gain new experiences and take on new challenges.
+          I'm a fast learner, detail-oriented, and always excited to gain
+          new experience and take on new challenges.
         </p>
 
 
         <!-- HIGHLIGHTS -->
         <div class="about-highlights">
 
-          <div class="about-item">
+          <div class="about-item reveal">
 
             <div class="about-icon">
               <i class="fa-solid fa-graduation-cap"></i>
@@ -358,7 +434,7 @@ I'm a fast learner, detail-oriented, and always excited to gain new experiences 
           </div>
 
 
-          <div class="about-item">
+          <div class="about-item reveal">
 
             <div class="about-icon">
               <i class="fa-solid fa-code"></i>
@@ -372,7 +448,7 @@ I'm a fast learner, detail-oriented, and always excited to gain new experiences 
           </div>
 
 
-          <div class="about-item">
+          <div class="about-item reveal">
 
             <div class="about-icon">
               <i class="fa-solid fa-pen-nib"></i>
@@ -414,7 +490,7 @@ I'm a fast learner, detail-oriented, and always excited to gain new experiences 
         <div
           v-for="skill in skills"
           :key="skill.name"
-          class="skill-card"
+          class="skill-card reveal"
         >
 
           <div class="skill-icon">
@@ -467,7 +543,7 @@ I'm a fast learner, detail-oriented, and always excited to gain new experiences 
         <article
           v-for="project in projects"
           :key="project.title"
-          class="project-card"
+          class="project-card reveal"
         >
 
           <!-- PROJECT IMAGE -->
@@ -477,6 +553,7 @@ I'm a fast learner, detail-oriented, and always excited to gain new experiences 
               v-if="project.image"
               :src="project.image"
               :alt="project.title"
+              loading="lazy"
             />
 
             <span v-else>
@@ -596,6 +673,19 @@ I'm a fast learner, detail-oriented, and always excited to gain new experiences 
       </a>
 
     </section>
+
+
+    <!-- =========================
+         BACK TO TOP
+    ========================== -->
+    <button
+      class="back-to-top"
+      :class="{ visible: showBackToTop }"
+      @click="scrollToTop"
+      aria-label="Back to top"
+    >
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
   </main>
 </template>
