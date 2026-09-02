@@ -1384,3 +1384,24 @@ a {
     justify-content: center;
   }
 }
+
+.about-highlights {
+  grid-template-columns: 1fr;
+
+  gap: 12px;
+}
+
+.about-item {
+  width: 100%;
+
+  min-height: 82px;
+
+  padding: 16px;
+}
+
+.about-icon {
+  width: 44px;
+  height: 44px;
+
+  font-size: 16px;
+}
