@@ -292,7 +292,7 @@ const projects = [
     </section>
 
 
-  <!-- =========================
+<!-- =========================
      SKILLS
 ========================= -->
 <section id="skills" class="skills-section">
@@ -314,18 +314,18 @@ const projects = [
       class="skill-card"
     >
 
-    <div class="skill-icon">
+      <div class="skill-icon">
 
-  <i
-    v-if="skill.icon.startsWith('fa-')"
-    :class="skill.icon"
-  ></i>
+        <i
+          v-if="skill.icon.startsWith('fa-')"
+          :class="skill.icon"
+        ></i>
 
-  <span v-else>
-    {{ skill.icon }}
-  </span>
+        <span v-else>
+          {{ skill.icon }}
+        </span>
 
-</div>
+      </div>
 
       <h3>
         {{ skill.name }}
