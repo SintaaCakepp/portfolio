@@ -248,48 +248,54 @@ const projects = [
 
 
         <!-- HIGHLIGHTS -->
-        <div class="about-highlights">
+<div class="about-highlights">
 
-          <div class="about-item">
+  <div class="about-item">
 
-            <span>🎓</span>
+    <div class="about-icon">
+      <i class="fa-solid fa-graduation-cap"></i>
+    </div>
 
-            <div>
-              <strong>Informatics Student</strong>
-              <small>Information Technology</small>
-            </div>
+    <div class="about-item-text">
+      <strong>Informatics Student</strong>
+      <small>Information Technology</small>
+    </div>
 
-          </div>
-
-
-          <div class="about-item">
-
-            <span>💻</span>
-
-            <div>
-              <strong>Web Development</strong>
-              <small>Frontend & UI Development</small>
-            </div>
-
-          </div>
+  </div>
 
 
-          <div class="about-item">
+  <div class="about-item">
 
-            <span>🎨</span>
+    <div class="about-icon">
+      <i class="fa-solid fa-code"></i>
+    </div>
 
-            <div>
-              <strong>Digital Creativity</strong>
-              <small>Design & Content Editing</small>
-            </div>
+    <div class="about-item-text">
+      <strong>Web Development</strong>
+      <small>Frontend &amp; UI Development</small>
+    </div>
 
-          </div>
+  </div>
 
-        </div>
 
-      </div>
+  <div class="about-item">
 
-    </section>
+    <div class="about-icon">
+      <i class="fa-solid fa-pen-nib"></i>
+    </div>
+
+    <div class="about-item-text">
+      <strong>Digital Creativity</strong>
+      <small>Design &amp; Content Editing</small>
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+</section>
 
 
 <!-- =========================
