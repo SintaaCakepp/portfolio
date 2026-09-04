@@ -709,8 +709,8 @@ section {
 
 .project-card {
   display: grid;
-  grid-template-columns: 45% 55%;
-  min-height: 240px;
+  grid-template-columns: 38% 62%;
+  min-height: 280px;
   min-width: 0;
   background: white;
   border: 1px solid #e8f0f9;
@@ -734,7 +734,7 @@ section {
 
 .project-image {
   position: relative;
-  min-height: 240px;
+  min-height: 280px;
   min-width: 0;
   display: flex;
   align-items: center;
@@ -789,8 +789,9 @@ section {
   position: relative;
   z-index: 2;
   color: white;
-  font-size: 54px;
+  font-size: 64px;
   font-weight: 800;
+  letter-spacing: -2px;
 }
 
 .project-image-text {
